@@ -1,3 +1,5 @@
+"use strict";
+
 const menuBars = document.querySelector(".menu-bars");
 const nav = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".nav-links li");
