@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  width: 100%;
+}
 .navbar {
   margin-top: 0px;
   display: flex;
@@ -70,9 +73,10 @@ nav {
   }
 }
 
-@media screen and (max-width: 571px) {
+@media screen and (max-width: 600px) {
   body {
     overflow-x: hidden;
+    width: 100%;
   }
   .nav-links {
     position: absolute;
@@ -87,12 +91,51 @@ nav {
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
+
   .nav-links li {
     opacity: 0;
   }
   .menu-bars {
     display: block;
   }
+  .nav-links .skate-dropdown {
+    width: 100%;
+  }
+
+  .nav-links .skateboards:hover .skate-dropdown {
+    border-radius: none;
+    position: absolute;
+    display: flex;
+    height: 200%;
+    left: -200%;
+
+    top: 8vh;
+    background-color: black;
+
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .skateboards {
+    padding: 25%;
+  }
+
+  /* .skate-dropdown {
+    position: absolute;
+    right: 400px;
+    height: 671px;
+    width: 496px;
+
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  } */
 }
 
 .nav-active {
@@ -141,15 +184,45 @@ nav {
   transition: transform 0.5s ease-in;
 }
 
-.skt-dropdown {
+.skate-dropdown {
   display: none;
   position: absolute;
-  background-color: rgb(68, 68, 68);
+  background-color: rgb(36, 36, 36);
+
+  list-style-type: none;
+}
+.merch-dropdown {
+  display: none;
+  position: absolute;
+  background-color: rgb(36, 36, 36);
   min-width: 150px;
   z-index: 1;
+  list-style-type: none;
+}
+.used-parts-dropdown {
+  display: none;
+  position: absolute;
+  background-color: rgb(36, 36, 36);
+  min-width: 150px;
+  z-index: 1;
+  list-style-type: none;
 }
 
-.skt-dropdown a {
+.skate-dropdown a {
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  align-items: center;
+  text-align: center;
+}
+.merch-dropdown a {
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  align-items: center;
+  text-align: center;
+}
+.used-parts-dropdown a {
   display: block;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -157,14 +230,39 @@ nav {
   text-align: center;
 }
 
-.skt-dropdown a:hover {
-  background-color: rgb(252, 255, 214);
-  color: #fff;
+.skate-dropdown a:hover {
+  background-color: rgb(83, 83, 83);
+  color: yellow;
+  border-radius: 5px;
 }
-.nav-links #sktb:hover .skt-dropdown {
+.merch-dropdown a:hover {
+  background-color: rgb(83, 83, 83);
+  color: yellow;
+  border-radius: 5px;
+}
+.used-parts-dropdown a:hover {
+  background-color: rgb(83, 83, 83);
+  color: yellow;
+  border-radius: 5px;
+}
+
+.nav-links .skateboards:hover .skate-dropdown {
   display: block;
   position: absolute;
   margin-top: 0px;
+  border-radius: 5px;
+}
+.nav-links .merch:hover .merch-dropdown {
+  display: block;
+  position: absolute;
+  margin-top: 0px;
+  border-radius: 5px;
+}
+.nav-links .used-parts:hover .used-parts-dropdown {
+  display: block;
+  position: absolute;
+  margin-top: 0px;
+  border-radius: 5px;
 }
 
 /* a {
